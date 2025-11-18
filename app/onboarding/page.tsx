@@ -1,18 +1,14 @@
 'use client';
 
-"use client";
-
 import { motion } from 'framer-motion';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
 
 interface FormData {
   interests: string[];
 }
 
-const axios = require('axios');
-
-export default function Onboarding() {
+export default function OnboardingPage() {
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
@@ -47,9 +43,15 @@ export default function Onboarding() {
       try {
         setIsLoading(true);
         // Submit the form data to the API
-        const response = await axios.post('/api/onboarding', formData);
+        const response = await fetch('/api/onboarding', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
         
-        if (response.data.success) {
+        if (response.ok) {
           // Redirect to the home page after successful submission
           router.push('/');
         }
@@ -87,16 +89,26 @@ export default function Onboarding() {
         {/* Step Content */}
         <div className="mb-8 min-h-[200px]">
           {step === 1 && (
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <h2 className="text-2xl font-semibold mb-4">Step 1: Welcome</h2>
               <p className="text-gray-600 mb-6">
                 Thank you for choosing BrandBoosters. We&apos;re excited to help you grow your brand!
               </p>
-            </div>
+            </motion.div>
           )}
 
           {step === 2 && (
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <h2 className="text-2xl font-semibold mb-4">Step 2: Your Preferences</h2>
               <p className="text-gray-600 mb-6">
                 Let us know what kind of services you&apos;re interested in.
@@ -116,16 +128,21 @@ export default function Onboarding() {
                   </label>
                 ))}
               </div>
-            </div>
+            </motion.div>
           )}
 
           {step === 3 && (
-            <div className="text-center">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <h2 className="text-2xl font-semibold mb-4">Step 3: Complete Setup</h2>
               <p className="text-gray-600 mb-6">
-                                You&apos;re all set! Welcome to BrandBoosters.
+                You&apos;re all set! Welcome to BrandBoosters.
               </p>
-            </div>
+            </motion.div>
           )}
         </div>
 
