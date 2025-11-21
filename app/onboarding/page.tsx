@@ -146,7 +146,7 @@ export default function OnboardingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-yellow-900 mb-3 font-display">Your Onboarding Journey</h1>
-            <p className="text-xl text-yellow-800 font-medium">Here's what to expect next for your selected services</p>
+            <p className="text-xl text-yellow-800 font-medium">Here&apos;s what to expect next for your selected services</p>
           </div>
           
           <div className="max-w-4xl mx-auto">
