@@ -19,8 +19,8 @@ export const navbarItems = [
    },
    {
       id: 4,
-      title: "Insights",
-      href: "/insights",
+      title: "Blog",
+      href: "/blog",
    },
    {
       id: 5,
@@ -77,8 +77,8 @@ export const footernavbarItems = [
    },
    {
       id: 5,
-      title: "Insights",
-      href: "insights",
+      title: "Blog",
+      href: "blog",
    },
    {
       id: 6,
@@ -1254,15 +1254,15 @@ export const insightsPublicationItems = [
 export const latestItemss = [
    {
       id: 1,
-      href: "/",
-      src: latest1,
+      href: "/blog/presenting-to-international-audience",
+      src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       links: [
          {
             id: 1,
             title: "public speaking"
          },
          {
-            id: 1,
+            id: 2,
             title: "storytelling"
          },
       ],
@@ -1272,17 +1272,93 @@ export const latestItemss = [
    },
    {
       id: 2,
-      href: "/",
-      src: latest2,
+      href: "/blog/company-presentation-templates",
+      src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       links: [
          {
-            id: 1,
+            id: 3,
             title: "presentation template"
          },
+         {
+            id: 4,
+            title: "branding"
+         },
       ],
-      title: "Developing compony-wide presentation template for premium blend.",
-      subTitle: "By Ihor Hulyahrodskyy",
-      date: "07 Dec 2022"
+      title: "Developing Company-wide Presentation Templates for Premium Blend",
+      subTitle: "By Sarah Johnson",
+      date: "15 Jun 2023"
+   },
+   {
+      id: 3,
+      href: "/blog/digital-marketing-trends",
+      src: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      links: [
+         {
+            id: 5,
+            title: "digital marketing"
+         },
+         {
+            id: 6,
+            title: "trends"
+         },
+      ],
+      title: "Top Digital Marketing Trends to Watch in 2023",
+      subTitle: "By Michael Chen",
+      date: "02 Jul 2023"
+   },
+   {
+      id: 4,
+      href: "/blog/ux-design-principles",
+      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      links: [
+         {
+            id: 7,
+            title: "UX design"
+         },
+         {
+            id: 8,
+            title: "user experience"
+         },
+      ],
+      title: "Essential UX Design Principles for Better User Engagement",
+      subTitle: "By Emma Rodriguez",
+      date: "18 Jul 2023"
+   },
+   {
+      id: 5,
+      href: "/blog/content-strategy",
+      src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      links: [
+         {
+            id: 9,
+            title: "content strategy"
+         },
+         {
+            id: 10,
+            title: "marketing"
+         },
+      ],
+      title: "Building an Effective Content Strategy for 2023",
+      subTitle: "By David Kim",
+      date: "05 Aug 2023"
+   },
+   {
+      id: 6,
+      href: "/blog/remote-team-collaboration",
+      src: "https://images.unsplash.com/photo-1522071820081-009c2c7e9ef3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      links: [
+         {
+            id: 11,
+            title: "remote work"
+         },
+         {
+            id: 12,
+            title: "team collaboration"
+         },
+      ],
+      title: "Mastering Remote Team Collaboration in the New Normal",
+      subTitle: "By Jessica Williams",
+      date: "22 Aug 2023"
    },
 ];
 

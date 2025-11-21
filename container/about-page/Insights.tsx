@@ -2,75 +2,70 @@ import Link from "next/link";
 import Image from "next/image";
 import { latestItemss } from "@/constants";
 
-export default function Insights() {
-	return (
-		<section className="w-full pb-[100px] lg:pb-[80px] md:pb-[60px] sm:pb-[40px] xm:pb-[40px] bg-background">
-			<div className="w-full flex flex-col justify-between">
-				<div className="w-full flex flex-col">
-					<div className="padding-x pb-[30px]">
-						<h2 className="sub-heading font-normal tracking-[-1.3px] text-[#212121] font-NeueMontreal">
-							Insights
-						</h2>
-					</div>
-					<div className="w-full border-t border-[#21212155] pt-[20px]">
-						<div className="w-full flex sm:flex-col xm:flex-col sm:gap-[20px] xm:gap-[20px] padding-x">
-							<div className="w-[50%] sm:w-full xm:w-full sm:flex-col xm:flex-col">
-								<h3 className="text-[20px] leading-[30px] font-medium text-secondry font-NeueMontreal">
-									Blogs:
-								</h3>
-							</div>
-							<div className="w-[50%] sm:w-full xm:w-full sm:flex-col xm:flex-col">
-								{latestItemss.map((item) => (
-									<div
-										key={item.id}
-										className={`group relative overflow-hidden ${
-											item.id == 1 && "hidden"
-										} block`}>
-										<div className="w-full flex flex-col gap-[20px]">
-											<Link
-												className="w-[350px] overflow-hidden rounded-[15px]"
-												href={item.href}>
-												<Image
-													src={item.src}
-													alt="img"
-													className="w-full hover:scale-[1.09] transition transform duration-[1s] ease-[.4,0,.2,1]"
-												/>
-											</Link>
-											<div className="flex gap-[10px] items-center absolute left-[25px] top-[25px]">
-												{item.links.map((link) => (
-													<div
-														className="transform translate-y-[-200%] group-hover:translate-y-0 transition-all duration-300 ease-in-out"
-														key={link.id}>
-														<div className="rounded-[50px] border border-about  py-[2px] px-[15px] cursor-pointer">
-															<Link
-																className="text-[18px] leading-[22px] font-NeueMontreal text-about uppercase"
-																href={"/"}>
-																{link.title}
-															</Link>
-														</div>
-													</div>
-												))}
-											</div>
-											<div className="flex flex-col gap-[7px]">
-												<h3 className="text-[20px] leading-[30px] font-NeueMontreal font-normal text-secondry">
-													Presenting to an International Audience: <br /> Tips
-													and Lessons Learned.
-												</h3>
-												<p className="text-[20px] leading-[30px] font-NeueMontreal font-normal text-gray-400">
-													{item.subTitle}
-												</p>
-												<p className="text-[20px] leading-[30px] font-NeueMontreal font-normal text-gray-400">
-													{item.date}
-												</p>
-											</div>
-										</div>
-									</div>
-								))}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+export default function Blog() {
+  return (
+    <section className="w-full py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Our Blog</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the latest articles, insights, and updates from our team of experts.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {latestItemss.map((post) => (
+            <article key={post.id} className="group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-white">
+              <Link href={post.href} className="block">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={post.src}
+                    alt={post.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div className="flex flex-wrap gap-2">
+                      {post.links.map((tag) => (
+                        <span 
+                          key={tag.id}
+                          className="bg-white/90 text-sm font-medium px-3 py-1 rounded-full text-gray-800"
+                        >
+                          {tag.title}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2 line-clamp-2">
+                    {post.title.replace(/<br\s*\/?>/g, ' ')}
+                  </h2>
+                  <p className="text-gray-600 mb-4">{post.subTitle}</p>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <span>{post.date}</span>
+                    <span className="mx-2">•</span>
+                    <span>5 min read</span>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link 
+            href="/blog" 
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200"
+          >
+            View All Articles
+            <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }

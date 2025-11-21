@@ -28,6 +28,9 @@ export { default as Insights } from './about-page/Insights';
 export { default as Heroinsights } from './insights-page/Hero';
 export { default as Publicationinsights } from './insights-page/Publication';
 
+// blog page
+export { default as Blog } from './Blog';
+
 // contact page
 export { default as Herocontact } from './contact-page/Hero';
 export { default as Form } from './contact-page/Form';
