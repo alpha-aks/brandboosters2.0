@@ -4,7 +4,6 @@ import { Curve, Ready } from "@/components";
 import {
 	Heropresentation,
 	Projectspresentation,
-	Publication,
 } from "@/container";
 
 export default function Presentation() {
@@ -19,7 +18,6 @@ export default function Presentation() {
 			<Curve backgroundColor={"#f1f1f1"}>
 				<Heropresentation />
 				<Projectspresentation />
-				<Publication />
 				<Ready />
 			</Curve>
 		</>

@@ -73,7 +73,7 @@ export default function Project({ item }: { item: any }) {
 				<div className="flex items-center justify-between bg-white cursor-pointer rounded-full group">
 					<Link
 						className="text-[19px] text-secondry uppercase font-normal font-NeueMontreal"
-						href={"/presentation"}>
+						href={"/services/digital-marketing"}>
 						<Rounded
 							className="py-[10px]"
 							backgroundColor="#212121">

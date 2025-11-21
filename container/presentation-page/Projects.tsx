@@ -24,7 +24,7 @@ export default function Projects() {
 			<section className="w-full relative z-30 padding-y rounded-t-[20px] bg-background">
 				<div>
 					<h2 className="sub-heading font-normal padding-x font-NeueMontreal text-secondry">
-						Innovative Services Designed to Grow Your Business
+						Innovative Services Designed to 
 						<br className="sm:hidden xm:hidden" />
 						Grow Your Business.
 					</h2>

@@ -18,7 +18,7 @@ export default function Hero() {
 						<div className="flex-1">
 							<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
 								We Boost <br />
-								<div className="flex items-center gap-[5px]">
+								<div className="flex items-baseline gap-2">
 									<motion.span
 										initial={{ width: 0 }}
 										animate={{ width: "auto" }}
@@ -29,16 +29,20 @@ export default function Hero() {
 										}}
 										className="leading-[130px]">
 										<Image
-											width={120}
-											height={50}
 											src={brandLogo}
-											alt="img"
-											className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[74px] sm:h-[45px] xm:w-[64px] xm:h-[40px] object-cover xl:mt-[15px] mt-[10px] rounded-[10px]"
+											alt="Brand Boosters logo"
+											className="w-[80px] h-auto object-contain mt-2"
+											sizes="(max-width: 768px) 60px, 80px"
 										/>
 									</motion.span>
-									<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
+									<motion.span
+										className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase"
+										initial={{ opacity: 0, y: 20 }}
+										animate={{ opacity: 1, y: 0 }}
+										transition={{ duration: 0.5, delay: 0.3 }}
+									>
 										YOUR Brand's
-									</h1>
+									</motion.span>
 								</div>
 								SOCIAL PRESENT
 							</h1>
@@ -69,7 +73,7 @@ export default function Hero() {
 							<div className="w-[50%] xm:w-full sm:w-full flex justify-between xm:flex-col xm:items-start sm:flex-col sm:items-start gap-[20px]">
 								<div>
 									<p className="paragraph font-NeueMontreal text-secondry">
-										WE BOOST YOUR BUISNESS
+										WE BOOST YOUR BUSINESS
 									</p>
 								</div>
 								<div className="flex items-center gap-[5px] group">

@@ -16,29 +16,30 @@ export default function About() {
 			role: 'grapic designer/social media manager',
 			image: sunlight
 		},
+		
 		{
 			id: 2,
-			name: 'Ry',
-			role: 'email marketing',
-			image: ry
-		},
-		{
-			id: 3,
-			name: 'Om',
-			role: 'video editor/motion grapic ',
-			image: om
-		},
-		{
-			id: 4,
 			name: 'Atharva',
-			role: 'grapic designer/Web developer',
+			role: 'Grapic designer/Web developer',
 			image: atharva
 		},
 		{
-			id: 5,
+			id: 3,
 			name: 'Nishant',
-			role: 'web developer',
+			role: 'Web developer',
 			image: nishant
+		},
+		{
+			id: 4,
+			name: 'Rishabh',
+			role: 'Email marketing',
+			image: ry
+		},
+		{
+			id: 5,
+			name: 'Om',
+			role: 'Video editor/motion grapic ',
+			image: om
 		}
 	];
 

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { aboutImg } from "@/public";
 import { LinkHover } from "@/animation";
-import { footerItems } from "@/constants";
 import { Heading, RoundButton } from "@/components";
 
 export default function About() {
@@ -13,7 +12,7 @@ export default function About() {
 		<section className="w-full bg-about padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
 			<div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
 				<h2 className="sub-heading font-medium font-NeueMontreal text-secondry">
-					BrandBoosters is a full-service marketing agency founded by Om, Prathull, Atharva, and Nishant.
+					BrandBoosters is a full-service marketing agency founded by Om, Pruthul, Atharva, and Nishant.
 					<br className="sm:hidden xm:hidden" /> We help businesses&nbsp;
 					<span className="sub-heading font-medium font-NeueMontreal link-flash cursor-pointer">
 						grow their brand,
@@ -49,21 +48,6 @@ export default function About() {
 									closely with clients to understand their unique needs and deliver 
 									solutions that not only look great but also drive measurable success.
 								</p>
-							</div>
-							<div className="w-[60%] flex justify-end flex-col  sm:w-full xm:w-full">
-								<h1 className="sub-paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-									S:
-								</h1>
-								<div className="flex flex-col">
-									{footerItems.map((item) => (
-										<LinkHover
-											key={item.id}
-											className="w-fit sub-paragraph font-medium capitalize before:h-[1px] after:h-[1px] before:bottom-[1px] after:bottom-[1px]"
-											title={item.title}
-											href={"/"}
-										/>
-									))}
-								</div>
 							</div>
 						</div>
 					</div>

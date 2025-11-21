@@ -44,7 +44,7 @@ export default function Works() {
 				<div className="flex items-center justify-between bg-white cursor-pointer rounded-full group">
 					<Link
 						className="paragraph text-secondry uppercase font-normal font-NeueMontreal"
-						href={"/presentation"}>
+						href={"/services/digital-marketing"}>
 						<Rounded
 							className="py-[6px]"
 							backgroundColor="#212121">
