@@ -6,13 +6,83 @@ import { useRouter } from 'next/navigation';
 
 interface FormData {
   interests: string[];
+  name: string;
+  email: string;
+  businessType: string;
 }
+
+const businessTypes = [
+  'Startup', 'Small Business', 'Agency', 'Enterprise', 'Freelancer'
+];
+
+const services = [
+  { id: 'web-dev', name: 'Web Development', icon: '🌐', color: '#FFD700' },
+  { id: 'marketing', name: 'Digital Marketing', icon: '📈', color: '#FFA500' },
+  { id: 'branding', name: 'Branding', icon: '🎨', color: '#FFD700' },
+  { id: 'content', name: 'Content Creation', icon: '✍️', color: '#FFA500' },
+  { id: 'social', name: 'Social Media', icon: '📱', color: '#FFD700' },
+  { id: 'seo', name: 'SEO', icon: '🔍', color: '#FFA500' },
+];
+
+const serviceSteps = {
+  'Web Development': [
+    'Initial consultation call',
+    'Project requirements gathering',
+    'Design mockup approval',
+    'Development phase',
+    'Testing and revisions',
+    'Launch and deployment'
+  ],
+  'Digital Marketing': [
+    'Marketing strategy session',
+    'Audience research',
+    'Campaign planning',
+    'Content creation',
+    'Campaign launch',
+    'Performance analysis'
+  ],
+  'Branding': [
+    'Brand discovery workshop',
+    'Market research',
+    'Brand identity development',
+    'Design system creation',
+    'Brand guidelines',
+    'Final delivery'
+  ],
+  'Content Creation': [
+    'Content strategy session',
+    'Content calendar planning',
+    'Content creation',
+    'Review and revisions',
+    'Content publishing',
+    'Performance tracking'
+  ],
+  'Social Media': [
+    'Platform analysis',
+    'Content strategy',
+    'Content calendar setup',
+    'Community management plan',
+    'Campaign execution',
+    'Analytics review'
+  ],
+  'SEO': [
+    'Website audit',
+    'Keyword research',
+    'On-page optimization',
+    'Technical SEO fixes',
+    'Content optimization',
+    'Monthly reporting'
+  ]
+};
 
 export default function OnboardingPage() {
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
-    interests: [] as string[]
+    interests: [] as string[],
+    name: '',
+    email: '',
+    businessType: ''
   });
   const router = useRouter();
 
@@ -70,19 +140,97 @@ export default function OnboardingPage() {
     }
   };
 
+  if (step === 3) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-yellow-900 mb-3 font-display">Your Onboarding Journey</h1>
+            <p className="text-xl text-yellow-800 font-medium">Here's what to expect next for your selected services</p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-black">
+            <div className="p-6 md:p-8">
+              <h2 className="text-2xl font-bold text-yellow-900 mb-6 text-center md:text-left">Your Onboarding Journey</h2>
+              
+              <div className="space-y-8">
+                {formData.interests.map((service, index) => (
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="border-b border-yellow-100 pb-6 last:border-0 last:pb-0"
+                  >
+                    <div className="flex flex-col md:flex-row md:items-start gap-4">
+                      <div className="flex items-center md:items-start space-x-3 md:space-x-4">
+                        <div className="w-12 h-12 rounded-full bg-yellow-400 flex-shrink-0 flex items-center justify-center border-2 border-black">
+                          <span className="text-xl">
+                            {services.find(s => s.name === service)?.icon || '✨'}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-bold text-yellow-900">{service}</h3>
+                      </div>
+                      
+                      <div className="ml-0 md:ml-4 mt-2 md:mt-0 flex-1">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {(serviceSteps[service as keyof typeof serviceSteps] || []).map((step, i) => (
+                            <div key={i} className="flex items-start group">
+                              <div className="flex-shrink-0 h-6 w-6 rounded-full bg-yellow-400 flex items-center justify-center mr-3 mt-0.5 border border-black">
+                                <span className="text-xs font-bold text-yellow-900">{i + 1}</span>
+                              </div>
+                              <p className="text-sm text-yellow-900 group-hover:text-black transition-colors">{step}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <div className="mt-8 bg-yellow-100 rounded-lg p-4 border border-yellow-200">
+                <p className="text-center text-yellow-900 font-medium">
+                  Your dedicated account manager will contact you within 24 hours to schedule your first step.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+          <div className="mt-10 text-center">
+            <p className="text-yellow-900 mb-6">
+              Need help? <a href="mailto:support@brandboosters.com" className="font-bold text-yellow-700 hover:underline">Contact our support team</a>
+            </p>
+            <button
+              onClick={() => router.push('/')}
+              className="inline-flex items-center px-6 py-3 border-2 border-black text-base font-bold rounded-lg shadow-[4px_4px_0_0_rgba(0,0,0,1)] bg-yellow-400 hover:bg-yellow-300 hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-none active:translate-y-1 transition-all"
+            >
+              Back to Home
+              <svg className="ml-2 -mr-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full bg-yellow-50 border-2 border-black rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome to BrandBoosters</h1>
-          <p className="text-gray-600">Let&apos;s get you set up in just a few steps</p>
+          <h1 className="text-4xl font-bold text-yellow-900 mb-2 font-display">Welcome to BrandBoosters</h1>
+          <p className="text-yellow-800 font-medium">Let&apos;s get you set up in just a few steps</p>
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full bg-gray-200 rounded-full h-2.5 mb-8">
+        <div className="w-full bg-yellow-200 rounded-full h-3 mb-8 border-2 border-black overflow-hidden">
           <div 
-            className="bg-blue-600 h-2.5 rounded-full transition-all duration-300" 
-            style={{ width: `${(step / 3) * 100}%` }}
+            className="bg-yellow-500 h-full rounded-full transition-all duration-300" 
+            style={{ width: `${(step / 3) * 100}%`, boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.1)' }}
           ></div>
         </div>
 
@@ -114,17 +262,26 @@ export default function OnboardingPage() {
                 Let us know what kind of services you&apos;re interested in.
               </p>
               <div className="space-y-4">
-                {['Web Development', 'Digital Marketing', 'Branding', 'Content Creation', 'Social Media'].map((service) => (
-                  <label key={service} className="flex items-center justify-center">
-                    <input 
-                      type="checkbox" 
-                      name="interests"
-                      value={service}
-                      checked={formData.interests.includes(service)}
-                      onChange={handleInputChange}
-                      className="rounded text-blue-600 mr-2" 
-                    />
-                    <span>{service}</span>
+                {services.map((service) => (
+                  <label key={service.name} className="flex items-center justify-center group">
+                    <div className="relative flex items-center">
+                      <input 
+                        type="checkbox" 
+                        name="interests"
+                        value={service.name}
+                        checked={formData.interests.includes(service.name)}
+                        onChange={handleInputChange}
+                        className="sr-only peer" 
+                      />
+                      <div className={`w-5 h-5 rounded-sm border-2 border-black mr-3 flex items-center justify-center ${formData.interests.includes(service.name) ? 'bg-yellow-400' : 'bg-yellow-100'} group-hover:bg-yellow-300 transition-colors`}>
+                        {formData.interests.includes(service.name) && (
+                          <svg className="w-3 h-3 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </div>
+                      <span className="font-medium text-yellow-900 group-hover:text-black transition-colors">{service.name}</span>
+                    </div>
                   </label>
                 ))}
               </div>
@@ -151,8 +308,10 @@ export default function OnboardingPage() {
           <button
             onClick={prevStep}
             disabled={step === 1}
-            className={`px-6 py-2 rounded-lg ${
-              step === 1 ? 'text-gray-400 cursor-not-allowed' : 'text-blue-600 hover:bg-blue-50'
+            className={`px-6 py-2 rounded-lg font-medium border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-all ${
+              step === 1 
+                ? 'bg-yellow-200 text-yellow-500 cursor-not-allowed border-yellow-300' 
+                : 'bg-yellow-400 text-black hover:bg-yellow-300 hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-none active:translate-y-1'
             }`}
           >
             Back
@@ -161,7 +320,9 @@ export default function OnboardingPage() {
           <button
             onClick={nextStep}
             disabled={isLoading}
-            className={`bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+            className={`bg-yellow-400 text-black px-6 py-2 rounded-lg font-medium border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:bg-yellow-300 hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-none active:translate-y-1 transition-all ${
+              isLoading ? 'opacity-70 cursor-not-allowed' : ''
+            }`}
           >
             {isLoading ? (
               <span className="flex items-center">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { logo, mobileLogo } from "@/public";
-import { footernavbarItems } from "@/constants";
+import { navbarItems } from "@/constants";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -49,7 +49,7 @@ export default function MobileNav() {
 							/>
 						</div>
 						<ul className="h-full w-full flex justify-center text-left flex-col gap-[10px] padding-x">
-							{footernavbarItems.map((item) => (
+							{navbarItems.map((item) => (
 								<Link
 									href={item.href}
 									key={item.id}
