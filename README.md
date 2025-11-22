@@ -1,6 +1,6 @@
 # BrandBoosters Marketing Agency
 
-## A full-service digital marketing agency founded by Om, Prathull, Atharva, and Nishant
+## A full-service digital marketing agency founded by Om, Pruthul, Atharva, and Nishant
 
 ### 🚀 Overview
 BrandBoosters is a dynamic marketing agency dedicated to delivering eye-catching campaigns and measurable results for businesses of all sizes. Our team of creative professionals combines innovative strategies with cutting-edge technology to help brands stand out in the digital landscape.
