@@ -471,8 +471,8 @@ export const projectItem = [
   {
      id: 1,
      title: "Digital Marketing",
-     href: "/services",
-     src: "https://cdn.discordapp.com/attachments/1437492837225861312/1438417981997846619/ABS2GSlas-LKMKHdwhUMetjt39L_fvjWBbUG1_Y5eohf1-yFROhI-gBaJfp05JV1HJyvz8cLywxjwStDbb233yxVH3jhp5Py7LEU9PhPJWemTG02zICiR_vqF1McAwOO_lWH-NK-gZ6Qu8IK3ptQNkXysHn0Ms8bMpr73FWPFLHQolMzWOxdSAs1024-rj.png?ex=6916cea3&is=69157d23&hm=da2095cea0a9f594b81a8810c4109302c7f6ca220eca772df53f09310d417963",
+     href: "/presentation",
+     src: "https://i.pinimg.com/736x/e1/ac/69/e1ac6950b51169c3ac4782ed068e5907.jpg",
      links: [
         { id: 1, title: "SEO", href: "/services" },
         { id: 2, title: "Social Media", href: "/services" },
@@ -483,8 +483,8 @@ export const projectItem = [
   {
      id: 2,
      title: "Web Development",
-     href: "/services",
-     src: "https://cdn.discordapp.com/attachments/1437492837225861312/1438036957451128902/image1.jpg?ex=6916bd48&is=69156bc8&hm=102edaa0cc8f3256db50fdead29a82c20b7d6b207b523d74a3891134397bd3ff",
+     href: "/presentation",
+     src: "https://i.pinimg.com/736x/d2/39/33/d2393398bfb86c895e601e834aebcf4f.jpg",
      links: [
         { id: 1, title: "Next.js", href: "/services" },
         { id: 2, title: "E-commerce", href: "/services" },
@@ -494,8 +494,8 @@ export const projectItem = [
   {
      id: 3,
      title: "Video Editing",
-     href: "/services",
-     src: "https://cdn.discordapp.com/attachments/1437492837225861312/1438004327816888390/ABS2GSmsi9wQO9Swf-CUGU0wdtRhesalVs2iiD8e0YWp9iXkf5-4Ib027gGM3RgSUHPVmLtw3eUicSLNcLk_Tn-dvaJQ6dDlpaTZKirlw4je-j6V7Yu6447VTmDqfWE44nS4FKSE7vGAckwKZTLXH5QhmSvEIuTARkox8RUjPE5bO5wf_3IHigs1024-rj.png?ex=69169ee4&is=69154d64&hm=2f4697270ddd7f9f7913218d5fe6704024002d9e9305532eed41d8ef53fc17c9",
+     href: "/presentation",
+     src: "https://i.pinimg.com/736x/bf/5b/42/bf5b421c6573b987dd2f6e0429105b42.jpg",
      links: [
         { id: 1, title: "Short-form", href: "/services" },
         { id: 2, title: "Explainers", href: "/services" },
@@ -505,8 +505,8 @@ export const projectItem = [
   {
      id: 4,
      title: "Graphic Designing",
-     href: "/services",
-     src: "https://media.discordapp.net/attachments/1437492837225861312/1438415593865744384/AIJ2gl-aZuyR1zsk2SQQ8UO_SnLjHLmJ9KSJWqiA7j-86Yz_FTl6Vs719kml6oE_vsLlNXkhQiuWRvUnTy2dVeObUKfEEhLhSKz3mLxbLHL33hLzjIPHsejbavRwrpHcyr2J7JAycNGGpj1FpGfc-S5Aycxy7IbkHbiOKLPK2gPLqvx4YUUyLCT2yCWWs-aeRtlKdrjOoB5jgXO8FWrUqe8eB77n7ulaE1XJ9ApRaWECa6lqq2LNafZwWBvk8w0hdUuvGnxKpIeO5ys67rsdIkoZ4UqUDtDQhxXRygGBEqElz1lvmVVebCFsrRuQkDx-aqY7bVDN-XxTu8Sveq44X2sqIQsXs1024-rj.png?ex=6916cc6a&is=69157aea&hm=67461e276080c4e5b3e5cefc41d46066d6abdc56cf3bbf588c2fa3061ac8dadc&=&format=webp&quality=lossless&width=1702&height=1702",
+     href: "/presentation",
+     src: "https://i.pinimg.com/736x/f3/76/e0/f376e0084146c55c7a3fc7a14788c874.jpg",
      links: [
         { id: 1, title: "Brand Identity", href: "/services" },
         { id: 2, title: "Social Creatives", href: "/services" },
