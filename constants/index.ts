@@ -963,7 +963,7 @@ export const presentationProjectItem = [
    {
       id: 1,
       title: "Digital Marketing",
-      src: "https://media.discordapp.net/attachments/1437492837225861312/1438417981997846619/ABS2GSlas-LKMKHdwhUMetjt39L_fvjWBbUG1_Y5eohf1-yFROhI-gBaJfp05JV1HJyvz8cLywxjwStDbb233yxVH3jhp5Py7LEU9PhPJWemTG02zICiR_vqF1McAwOO_lWH-NK-gZ6Qu8IK3ptQNkXysHn0Ms8bMpr73FWPFLHQolMzWOxdSAs1024-rj.png?ex=6916cea3&is=69157d23&hm=da2095cea0a9f594b81a8810c4109302c7f6ca220eca772df53f09310d417963&=&format=webp&quality=lossless&width=1702&height=1702",
+      src: "https://i.pinimg.com/736x/e1/ac/69/e1ac6950b51169c3ac4782ed068e5907.jpg",
       href: "/services/digital-marketing",
       links: [
          {
@@ -991,7 +991,7 @@ export const presentationProjectItem = [
    {
       id: 2,
       title: "Video Editing",
-      src: "https://media.discordapp.net/attachments/1437492837225861312/1438004327816888390/ABS2GSmsi9wQO9Swf-CUGU0wdtRhesalVs2iiD8e0YWp9iXkf5-4Ib027gGM3RgSUHPVmLtw3eUicSLNcLk_Tn-dvaJQ6dDlpaTZKirlw4je-j6V7Yu6447VTmDqfWE44nS4FKSE7vGAckwKZTLXH5QhmSvEIuTARkox8RUjPE5bO5wf_3IHigs1024-rj.png?ex=69169ee4&is=69154d64&hm=2f4697270ddd7f9f7913218d5fe6704024002d9e9305532eed41d8ef53fc17c9",
+      src: "https://i.pinimg.com/736x/bf/5b/42/bf5b421c6573b987dd2f6e0429105b42.jpg",
       href: "/services/video-editing",
       links: [
          {
@@ -1014,7 +1014,7 @@ export const presentationProjectItem = [
    {
       id: 3,
       title: "Graphic Designing",
-      src: "https://media.discordapp.net/attachments/1437492837225861312/1438415593865744384/AIJ2gl-aZuyR1zsk2SQQ8UO_SnLjHLmJ9KSJWqiA7j-86Yz_FTl6Vs719kml6oE_vsLlNXkhQiuWRvUnTy2dVeObUKfEEhLhSKz3mLxbLHL33hLzjIPHsejbavRwrpHcyr2J7JAycNGGpj1FpGfc-S5Aycxy7IbkHbiOKLPK2gPLqvx4YUUyLCT2yCWWs-aeRtlKdrjOoB5jgXO8FWrUqe8eB77n7ulaE1XJ9ApRaWECa6lqq2LNafZwWBvk8w0hdUuvGnxKpIeO5ys67rsdIkoZ4UqUDtDQhxXRygGBEqElz1lvmVVebCFsrRuQkDx-aqY7bVDN-XxTu8Sveq44X2sqIQsXs1024-rj.png?ex=6916cc6a&is=69157aea&hm=67461e276080c4e5b3e5cefc41d46066d6abdc56cf3bbf588c2fa3061ac8dadc&=&format=webp&quality=lossless&width=1702&height=1702",
+      src: "https://i.pinimg.com/736x/f3/76/e0/f376e0084146c55c7a3fc7a14788c874.jpg",
       href: "/services/graphic-design",
       links: [
          {
@@ -1037,7 +1037,7 @@ export const presentationProjectItem = [
    {
       id: 4,
       title: "Web Development",
-      src: "https://cdn.discordapp.com/attachments/1437492837225861312/1438036957451128902/image1.jpg?ex=6916bd48&is=69156bc8&hm=102edaa0cc8f3256db50fdead29a82c20b7d6b207b523d74a3891134397bd3ff",
+      src: "https://i.pinimg.com/736x/d2/39/33/d2393398bfb86c895e601e834aebcf4f.jpg",
       href: "/services/web-development",
       links: [
          {
@@ -1065,7 +1065,7 @@ export const presentationProjectItem = [
    {
       id: 5,
       title: "Content Creation",
-      src: "https://media.discordapp.net/attachments/1437492837225861312/1438417014715846657/ABS2GSmqQ7L8p2Lca6XI64rS5LCd0kxt74QeqWTWJaJ23s0rJ6besm7iDdoFxS940QdicS3uNMjoa-qKdi2sgh4gUvNyR-7cvtKSCrkJOMDRvXBYRKeVHXjlyF67OZVQu2uYSGrrR39mp-MMlihxzvJr1aF0URMMJt1TYCuNy-JGbfyNUldQBws1024-rj.png?ex=6916cdbc&is=69157c3c&hm=7b5a24a25e2dea712e5c0d640affa909bd99743b2b264dec41c0c6891dc0980d&=&format=webp&quality=lossless&width=1702&height=1702",
+      src: "https://i.pinimg.com/736x/19/fa/67/19fa6712b2f231b3f8dd863736622a89.jpg",
       href: "/services/content-creation",
       links: [
          {
@@ -1093,7 +1093,7 @@ export const presentationProjectItem = [
    {
       id: 6,
       title: "Channel Marketing",
-      src: "https://media.discordapp.net/attachments/1433390260397805691/1438441443810217994/AIJ2gl_NVFGfS0dcOkk-wlLhoyHLjbgJz_Fu2isBnlTp6oo5pYr0KfSLIa51DidvCiOOH2dsiYjhNk_15xN5SMdkenPWnuVL01NqSgVtJUcTBTtHzsjrrcC0PoM6P_kla8gG_vprJyaGiRqq9bWb5Ui6M5I1F-Zo-VIl0wBFSjMNA89fyo0hv2Yd6dHbHQFfc54Q64oFZyKFswWhsM9o4zYGa-UJ7Yg8Ne6UK0TRtvdzZPQFIw-x4EQtAxQMjXCjv_5sERnlynEdxKlFypPu0B9dqmVbY_eqUgIS_BxxDP2AsGlfEGuhj5k-lNiz-mkedN517CZxMQ1fhPbLfBjWj1iq0_gs1024-rj.png?ex=6916e47d&is=691592fd&hm=4d03ca4952870a935e532e51ca3ccd11d9c5da6169822b89d76cc1939d7a9941&=&format=webp&quality=lossless&width=1702&height=1702",
+      src: "https://i.pinimg.com/736x/71/56/4e/71564eb88f0e2d7f50661be48112dd7b.jpg",
       href: "/services/channel-marketing",
       links: [
          {
@@ -1121,7 +1121,7 @@ export const presentationProjectItem = [
    {
       id: 7,
       title: "Social Media Management",
-      src: "https://cdn.discordapp.com/attachments/1437492837225861312/1438440538310443049/ABS2GSkbo9YRJXIRalZ44TX2iOlWyZQFjI7COETWOYPUJkikC8ke1fi90IPb975TrQof9FkYAjad-f1SSJxZASQAqg_EXnmX_qcr2Fk33NmtBILEZrho9jf67HGbV1WN43YUP-GPTrOpfRJtDEkEUaFaJejRS3wa9XFrmEIboepamwbiwBddrws1024-rj.png?ex=6916e3a5&is=69159225&hm=7c884e037e3b9d0988ea0dae6d42d9f73d98c747551ff99dbb53c37038211972",
+      src: "https://i.pinimg.com/736x/01/06/66/0106662957bd1750abbc62187803de61.jpg",
       href: "/services/social-media-marketing",
       links: [
          {
@@ -1139,7 +1139,7 @@ export const presentationProjectItem = [
    {
       id: 7,
       title: "Data Analysis",
-      src: "https://media.discordapp.net/attachments/1437492837225861312/1438067549282500648/image0.jpg?ex=69163105&is=6914df85&hm=0ceb241acec31d40851d0a9f619569db9a43bc40f85902edc967d6a65c53eb2f&=&format=webp&width=1702&height=1702",
+      src: "https://i.pinimg.com/736x/b2/e7/0d/b2e70daa97ab666f6ca148a1622e14ed.jpg",
       href: "/case/",
       links: [
          {
@@ -1157,7 +1157,7 @@ export const presentationProjectItem = [
    {
       id: 8,
       title: "E-commerce",
-      src: "https://cdn.discordapp.com/attachments/1433390260397805691/1438441383428886629/ABS2GSlZnuPSkjx2Yq7hVYPWL7_hbWhxKqZPzm-vqFioZF8Jk831waEiDPAIom5Mvk2dll4KXMe43mh6WDmArh6FhpksdJXgFAlvbPn6ugWo_nytpN61mDdtYtF-MzxEj66axXfP-vQS7eLtlOPnATNkSn-l5RT4rpj5FcBE4WCgFYcy3FkQs1024-rj.png?ex=6916e46e&is=691592ee&hm=a2166bd0bbcdd46db041402e8e948a321d32d38f067a021a0ad5bd645f1b958c",
+      src: "https://i.pinimg.com/736x/c4/39/77/c43977bb97cbc34369cdd466b8e8a5eb.jpg",
       href: "/services/ecommerce",
       links: [
          {
@@ -1185,7 +1185,7 @@ export const presentationProjectItem = [
    {
       id: 9,
       title: "SEO",
-      src: "https://cdn.discordapp.com/attachments/1437492837225861312/1438417014715846657/ABS2GSmqQ7L8p2Lca6XI64rS5LCd0kxt74QeqWTWJaJ23s0rJ6besm7iDdoFxS940QdicS3uNMjoa-qKdi2sgh4gUvNyR-7cvtKSCrkJOMDRvXBYRKeVHXjlyF67OZVQu2uYSGrrR39mp-MMlihxzvJr1aF0URMMJt1TYCuNy-JGbfyNUldQBws1024-rj.png?ex=6916cdbc&is=69157c3c&hm=7b5a24a25e2dea712e5c0d640affa909bd99743b2b264dec41c0c6891dc0980d&=&format=webp&quality=lossless&width=1702&height=1702",
+      src: "https://i.pinimg.com/736x/19/fa/67/19fa6712b2f231b3f8dd863736622a89.jpg",
       href: "/services/seo",
       links: [
          {
@@ -1211,7 +1211,6 @@ export const presentationProjectItem = [
       ]
    },
 ];
-
 
 export const publicationItems = [
    {
