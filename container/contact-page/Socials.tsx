@@ -56,32 +56,18 @@ export default function Socials() {
 								<div className="flex flex-col gap-y-[10px]">
 									<LinkHover
 										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium  capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
-										title={`202-1965 W 4th Awe`}
+										title={`Maharashtra, India`}
 										href="/"
 									/>
-									<LinkHover
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium  capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
-										title={`Vancouver, Canada`}
-										href="/"
-									/>
-									<LinkHover
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium  capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
-										title="30 Chukarina"
-										href="/"
-									/>
-									<LinkHover
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium  capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
-										title="St Lviv, Ukraine"
-										href="/"
-									/>
+									
 								</div>
 							</div>
 							<div className="flex w-fit h-fit gap-x-[5px] group">
 								<div className="rounded-[50px] border-[2px] border-[#21212155] group-hover:bg-secondry  py-[3px] px-[12px] cursor-pointer">
 									<Link
-										href="mailto:hello@ochi.design"
+										href="mailto:hello@brandboosters.marketing"
 										className="paragraph font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all duration-200 ease-in">
-										hello@ochi.design
+										hello@brandboosters.marketing
 									</Link>
 								</div>
 								<div className="w-[33px] flex items-center justify-center h-[33px] border-[2px] border-[#21212155] rounded-[50px] group-hover:bg-secondry transition-all duration-200 ease-in cursor-pointer sm:hidden xm:hidden">
