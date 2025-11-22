@@ -12,7 +12,7 @@ export default function Ratings() {
 			<div className="w-[49.5%] sm:w-full xm:w-full justify-between h-[60vh] sm:h-[50vh] xm:h-[50vh] gap-[10px]">
 				<div className="w-full h-full flex items-center justify-center rounded-[10px] bg-marquee relative">
 					<Image
-						src="https://images.prismic.io/alphas/aRNlSbpReVYa4WUx_Gemini_Generated_Image_a0x2pta0x2pta0x2.png?auto=format,compress"
+						src=""
 						alt="brandImg"
 						fill
 						className="object-cover"
@@ -29,7 +29,7 @@ export default function Ratings() {
 			<div className="w-[50%] sm:w-full xm:w-full sm:flex-col xm:flex-col flex gap-[15px]">
 				<div className="w-full flex items-center justify-center rounded-[10px] bg-secondry relative h-[60vh] sm:h-[50vh] xm:h-[50vh]">
 					<Image
-						src={brand02}
+						src=
 						alt="brandImg"
 						width={150}
 						height={150}
