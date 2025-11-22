@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface FormData {
   interests: string[];
@@ -76,6 +77,7 @@ const serviceSteps = {
 };
 
 export default function OnboardingPage() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
@@ -84,7 +86,14 @@ export default function OnboardingPage() {
     email: '',
     businessType: ''
   });
-  const router = useRouter();
+
+  const handleBack = () => {
+    if (step > 1) {
+      setStep(step - 1);
+    } else {
+      router.back();
+    }
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked, type } = e.target;
@@ -143,6 +152,28 @@ export default function OnboardingPage() {
   if (step === 3) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 py-12 px-4">
+        <div className="fixed top-4 left-4 z-50">
+          <button
+            onClick={handleBack}
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
+            aria-label="Go back"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-gray-700"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+        </div>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-yellow-900 mb-3 font-display">Your Onboarding Journey</h1>
@@ -220,6 +251,28 @@ export default function OnboardingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 flex items-center justify-center p-4">
+      <div className="fixed top-4 left-4 z-50">
+        <button
+          onClick={handleBack}
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
+          aria-label="Go back"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 text-gray-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+      </div>
       <div className="max-w-2xl w-full bg-yellow-50 border-2 border-black rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-yellow-900 mb-2 font-display">Welcome to BrandBoosters</h1>
