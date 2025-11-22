@@ -51,14 +51,10 @@ export default function Socials() {
 						<div className="w-[50%] sm:w-full xm:w-full flex sm:flex-col xm:flex-col justify-between gap-y-[20px]">
 							<div>
 								<h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-									L:
+								
 								</h1>
 								<div className="flex flex-col gap-y-[10px]">
-									<LinkHover
-										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium  capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
-										title={`Maharashtra, India`}
-										href="/"
-									/>
+								
 									
 								</div>
 							</div>
