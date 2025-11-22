@@ -18,6 +18,11 @@ export default function Document() {
         <meta property="og:title" content="BrandBoosters - Creative Branding Agency" />
         <meta property="og:description" content="We help brands grow through strategic design and development solutions." />
         <meta property="og:image" content="https://www.brandboosters.marketing/logo.png" />
+        <meta property="og:image:secure_url" content="https://www.brandboosters.marketing/logo.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="BrandBoosters Logo" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -26,9 +31,8 @@ export default function Document() {
         <meta property="twitter:description" content="We help brands grow through strategic design and development solutions." />
         <meta property="twitter:image" content="https://www.brandboosters.marketing/logo.png" />
         
-        {/* WhatsApp */}
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        {/* WhatsApp Specific */}
+        <meta property="og:site_name" content="BrandBoosters" />
       </Head>
       <body>
         <Main />
