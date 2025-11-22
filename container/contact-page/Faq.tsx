@@ -1,21 +1,33 @@
 "use client";
 import { useState } from "react";
-import { FaqItems, clientsItem } from "@/constants";
+import faqData from "@/constants/faq";
 import { motion, AnimatePresence } from "framer-motion";
 
+interface FaqItem {
+  id: number;
+  question: string;
+  title: string;
+  description: string;
+  links: Array<{
+    id: number;
+    title: string;
+    description: string;
+  }>;
+}
+
 export default function Faq() {
-	const [activeAccordion, setActiveAccordion] = useState(clientsItem[0].id);
-	const toggleAccordion = (itemId: any) => {
-		setActiveAccordion((prev) => (prev === itemId ? null : itemId));
-	};
+  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+  
+  const toggleAccordion = (itemId: number) => {
+    setActiveAccordion((prev) => (prev === itemId ? null : itemId));
+  };
+  
+  // Ensure faqData is an array before mapping
+  const faqItems: FaqItem[] = Array.isArray(faqData) ? faqData : [];
 
 	return (
 		<section className="w-full padding-y mt-[-10px] bg-background z-30 relative rounded-t-[20px]">
-			<h1 className="sub-heading padding-x font-medium font-NeueMontreal text-secondry pb-[50px]">
-				A few things you <br />
-				may want to ask us:
-			</h1>
-			{FaqItems.map((item) => (
+			{faqItems.map((item: FaqItem) => (
 				<div
 					key={item.id}
 					className={`w-full flex py-[10px] flex-col ${
@@ -67,7 +79,7 @@ export default function Faq() {
 													{item.description}
 												</p>
 											</div>
-											{item.links.map((link) => (
+											{item.links.map((link: { id: number; title: string; description: string }) => (
 												<div
 													key={link.id}
 													className="flex pt-[20px] sm:flex-col xm:flex-col sm:gap-[20px] xm:gap-[20px] justify-between gap-[80px]">

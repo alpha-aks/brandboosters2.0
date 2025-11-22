@@ -166,7 +166,7 @@ export default function Form() {
             )}
             <div className="flex items-center gap-2 ml-4">
               <p className="paragraph text-secondry font-NeueMontreal font-normal">I agree with the</p>
-              <Link className="paragraph font-medium font-NeueMontreal text-secondry capitalize hover:underline" href={"/privacy"}>
+              <Link className="paragraph font-medium font-NeueMontreal text-secondry capitalize hover:underline" href={"/privacy-policy"}>
                 Privacy Policy
               </Link>
             </div>

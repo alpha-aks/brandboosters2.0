@@ -52,6 +52,16 @@ export const footerItems = [
       title: "LinkedIn",
       href: "https://www.linkedin.com/company/brandboosters-marketing/posts/?feedView=all",
    },
+   {
+      id: 5,
+      title: "Privacy Policy",
+      href: "/privacy-policy",
+   },
+   {
+      id: 6,
+      title: "Legal Terms",
+      href: "/legal-terms",
+   },
 ];
 
 export const footernavbarItems = [
