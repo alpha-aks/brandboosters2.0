@@ -61,7 +61,7 @@ export default function About() {
 						onMouseEnter={() => setHovered(true)}
 						onMouseLeave={() => setHovered(false)}>
 						<RoundButton
-							href="/about-us"
+							href="/BrandBoosters"
 							title="meet the team"
 							bgcolor="#000"
 							className="bg-white text-black"
