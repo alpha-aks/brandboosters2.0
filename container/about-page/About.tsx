@@ -9,38 +9,41 @@ export default function About() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-	const teamMembers = [
-		{
+	/*
+// Team members shown in the carousel.
+    const teamMembers = [
+        {
             id: 1,
             name: 'Pruthul',
             role: 'grapic designer/social media manager',
             image: sunlight
         },
-		{
-			id: 2,
-			name: 'Atharva',
-			role: 'Grapic designer/Web developer',
-			image: atharva
-		},
-		{
-			id: 3,
-			name: 'Nishant',
-			role: 'Web developer',
-			image: nishant
-		},
-		{
-			id: 4,
-			name: 'Rishabh',
-			role: 'Email marketing',
-			image: ry
-		},
-		{
-			id: 5,
-			name: 'Om',
-			role: 'Video editor/motion grapic ',
-			image: om
-		}
-	];
+        {
+            id: 2,
+            name: 'Rishabh',
+            role: 'email marketing',
+            image: ry
+        },
+        {
+            id: 3,
+            name: 'Om',
+            role: 'video editor/motion grapic ',
+            image: om
+        },
+        {
+            id: 4,
+            name: 'Atharva',
+            role: 'grapic designer/Web developer',
+            image: atharva
+        },
+        {
+            id: 5,
+            name: 'Nishant',
+            role: 'web developer',
+            image: nishant
+        }
+    ];
+*/
 
 	// Auto-advance the carousel
 	useEffect(() => {
