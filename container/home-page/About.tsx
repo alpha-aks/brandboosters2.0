@@ -12,7 +12,7 @@ export default function About() {
 		<section className="w-full bg-about padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
 			<div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
 				<h2 className="sub-heading font-medium font-NeueMontreal text-secondry">
-					BrandBoosters is a full-service marketing agency founded by Om, Pruthul, Atharva, and Nishant.
+					BrandBoosters is a full-service marketing agency.
 					<br className="sm:hidden xm:hidden" /> We help businesses&nbsp;
 					<span className="sub-heading font-medium font-NeueMontreal link-flash cursor-pointer">
 						grow their brand,
