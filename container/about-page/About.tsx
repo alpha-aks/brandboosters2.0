@@ -6,47 +6,47 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 export default function About() {
+	const showTeamSection = false;
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-	/*
-// Team members shown in the carousel.
-    const teamMembers = [
-        {
-            id: 1,
-            name: 'Pruthul',
-            role: 'grapic designer/social media manager',
-            image: sunlight
-        },
-        {
-            id: 2,
-            name: 'Rishabh',
-            role: 'email marketing',
-            image: ry
-        },
-        {
-            id: 3,
-            name: 'Om',
-            role: 'video editor/motion grapic ',
-            image: om
-        },
-        {
-            id: 4,
-            name: 'Atharva',
-            role: 'grapic designer/Web developer',
-            image: atharva
-        },
-        {
-            id: 5,
-            name: 'Nishant',
-            role: 'web developer',
-            image: nishant
-        }
-    ];
-*/
+	// Team members shown in the carousel.
+	const teamMembers = [
+		{
+			id: 1,
+			name: 'Pruthul',
+			role: 'grapic designer/social media manager',
+			image: sunlight
+		},
+		{
+			id: 2,
+			name: 'Rishabh',
+			role: 'email marketing',
+			image: ry
+		},
+		{
+			id: 3,
+			name: 'Om',
+			role: 'video editor/motion grapic ',
+			image: om
+		},
+		{
+			id: 4,
+			name: 'Atharva',
+			role: 'grapic designer/Web developer',
+			image: atharva
+		},
+		{
+			id: 5,
+			name: 'Nishant',
+			role: 'web developer',
+			image: nishant
+		}
+	];
 
 	// Auto-advance the carousel
 	useEffect(() => {
+		if (!showTeamSection) return;
 		if (!isAutoPlaying) return;
 		
 		const interval = setInterval(() => {
@@ -54,15 +54,17 @@ export default function About() {
 		}, 4000);
 		
 		return () => clearInterval(interval);
-	}, [isAutoPlaying]);
+	}, [isAutoPlaying, showTeamSection]);
 
 	const nextSlide = () => {
+		if (!showTeamSection) return;
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
 		setIsAutoPlaying(false);
 		setTimeout(() => setIsAutoPlaying(true), 8000);
 	};
 
 	const prevSlide = () => {
+		if (!showTeamSection) return;
 		setCurrentIndex((prevIndex) => (prevIndex - 1 + teamMembers.length) % teamMembers.length);
 		setIsAutoPlaying(false);
 		setTimeout(() => setIsAutoPlaying(true), 8000);
@@ -104,7 +106,8 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-			{/* Team Slider Section */}
+			{/* Team Slider section is hidden intentionally. */}
+			{showTeamSection && (
 			<div className="padding-x pt-[100px] lg:pt-[80px] md:pt-[60px] sm:pt-[40px] xm:pt-[40px]">
 				<div className="relative w-full max-w-7xl mx-auto">
 					<h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#212121] font-FoundersGrotesk">Meet Our Team</h2>
@@ -231,6 +234,7 @@ export default function About() {
 					</div>
 				</div>
 			</div>
+			)}
 		</section>
 	);
 }
